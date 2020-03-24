@@ -16,7 +16,8 @@
   "author": "Joshua deLorimier",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
