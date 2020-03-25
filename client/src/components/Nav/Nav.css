@@ -1,13 +1,48 @@
 .nav-container {
     background-image: url('https://userscontent2.emaze.com/images/f3632f55-0a0f-4461-acdd-7f56eea7c879/862a8b9f6c8c1e1b758866a1f0e4e61e.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    background-color: rgba(255,255,255,0.1);
     height: 120px;
-    color: white;
+  
     text-align: Center;
     font-size: 40px;
     padding-top: 40px;
     
 }
 
-.nav-title {
-
+.nav-color-overlay{
+    background-color: rgba(255,100,255,0.3);
+    margin-top: -40px;
+    position: absolute;
+    height: 160px;
+    width: 100%;
 }
+
+.nav-title {
+    margin-top: 30px;
+    color: rgba(255,255,255,0);
+    text-shadow: 1px 3px 0 rgba(150,150,150,0), 1px 13px 5px rgba(171, 168, 168, 0);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(0,0,0,0);
+    animation: fadeIn ease 5s forwards;
+    animation-delay: 1s;
+  
+}
+
+@keyframes fadeIn {
+    0% {
+        color: rgba(255,255,255,0);
+        text-shadow: 1px 3px 0 rgba(150,150,150,0), 1px 13px 5px rgba(171, 168, 168, 0);
+        -webkit-text-stroke-color: rgba(0,0,0,0);
+    }
+    100% {
+        color: rgba(255,255,255,1);
+        text-shadow: 1px 3px 0 rgba(150,150,150,1), 1px 13px 5px rgba(171, 168, 168, 1);
+        -webkit-text-stroke-color: rgba(0,0,0,1);
+    }
+}
+

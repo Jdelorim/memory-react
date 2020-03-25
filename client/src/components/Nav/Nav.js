@@ -3,10 +3,15 @@ import './Nav.css';
 
 const Nav = () => {
     return(
-        <div className='nav-container'>
-            
-            <div classname='nav-title'>The Expanse Memory Game</div>
-        </div>
+        
+             <div className='nav-container'>
+                <div className='nav-color-overlay'>
+                    <div className='nav-title'>The Expanse Memory Game</div>
+                    
+                </div>
+            </div>
+        
+       
     )
 }
 
