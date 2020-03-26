@@ -1,5 +1,12 @@
+@font-face{
+    font-family: 'TerminatorRealNFI';
+    src: url('/font/TerminatorRealNFI.woff') format('woff')
+}
+
 body {
     margin: 0;
-    font-family: 'Arial Black';
+    font-family: 'TerminatorRealNFI';
+    font-weight: normal;
+    font-style: normal;
     background-color: black;
 }

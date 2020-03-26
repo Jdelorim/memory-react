@@ -15,6 +15,9 @@ const App = () => {
     return(
         <div className='container'>
            <Nav Pname={tempData.name} Pscore={tempData.score} highScore={tempData.highScore} />
+           <div className='playing-area'>
+               {/*<Wrapper />*/}
+           </div>
         </div>
     )
 }
