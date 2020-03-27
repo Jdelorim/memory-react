@@ -1,7 +1,7 @@
 import React from 'react';
-
+import './Register.css';
 //finish api calls
-//make input it's own stateless component on this page
+
 class Register extends React.Component {
         
         state = {
@@ -12,7 +12,7 @@ class Register extends React.Component {
         handleChange = e => {
             this.setState({
                 [e.target.name]: e.target.value
-            })
+            },()=>console.log(this.state))
         }
 
         onSubmit = e => { 
@@ -26,8 +26,9 @@ class Register extends React.Component {
         }
 
         render() {
-            return(
+            return ( 
                 <div className='reg-container'>
+                    <div className='img-container'>
                     <form onSubmit={this.onSubmit}>
                         <div className='form-group'>
                             <label>User Name:</label>
@@ -42,14 +43,16 @@ class Register extends React.Component {
                             name='userPassword' value={this.state.userPassword}
                             onChange={this.handleChange} required />
                         </div>
-
+                        
                         <div className='form-group'>
-                            <button type='submit'>
+                            <button id='regButton' type='submit'>
                                 Let's Play!
                             </button>
                         </div>
                     </form>
-                    </div>
+                    </div> 
+                </div>
+                
             )
 
         }

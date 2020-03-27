@@ -16,7 +16,7 @@
 }
 
 .nav-color-overlay{
-    background: linear-gradient(180deg, rgba(255,100,255,0.7) 0%, rgba(9,9,121,.8) 50%, rgba(0,0,0,.95) 100%);
+    background: linear-gradient(180deg, rgba(255,100,255,0.7) 0%, rgb(51, 204, 255,0.7) 50%, rgba(0,0,0,1) 100%);
     margin-top: -40px;
     position: absolute;
     height: 160px;

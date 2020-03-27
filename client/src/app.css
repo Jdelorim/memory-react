@@ -9,4 +9,11 @@ body {
     font-weight: normal;
     font-style: normal;
     background-color: black;
+    background-image: url("https://www.transparenttextures.com/patterns/grid-me.png");
+}
+
+input{
+    font-family: 'TerminatorRealNFI';
+    font-weight: normal;
+    font-style: normal;
 }
