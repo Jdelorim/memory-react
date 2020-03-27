@@ -13,9 +13,7 @@
     background-size: cover;
     height: 120px;
     padding-top: 40px;
-   
 }
-
 
 .nav-color-overlay{
     background: linear-gradient(180deg, rgba(255,100,255,0.7) 0%, rgba(9,9,121,.8) 50%, rgba(0,0,0,.95) 100%);
@@ -33,16 +31,14 @@
     font-size: 40px;
     margin-top: 30px;
     margin-bottom: 25px;
-   color: rgba(255,255,255,0);
+    color: rgba(255,255,255,0);
     -webkit-text-stroke-width: 1px;
-   animation: fadeIn ease 3s forwards;
+    animation: fadeIn ease 3s forwards;
     animation-delay: 0.5s;
 }
 
 @keyframes fadeIn {
     0% {
-       
-       /*text-shadow: 1px 3px 0 rgba(150,150,150,0), 1px 13px 5px rgba(171, 168, 168, 0);*/
         -webkit-text-stroke-color: rgba(255,255,255,0);
     }
     50% {
@@ -50,8 +46,6 @@
     }
     
     100% {
-       
-    /* text-shadow: 1px 3px 0 rgba(150,150,150,1), 1px 13px 5px rgba(171, 168, 168, 1);*/
         -webkit-text-stroke-color: rgba(255,100,255,1);
     }
 }
@@ -89,7 +83,11 @@ ul#menu li {
     color: rgba(0,0,0,0);
     animation: fadeIn2 ease 2s forwards;
     animation-delay: 4.5s;
+    
 
+}
+li span{
+    color:black;
 }
 
 @keyframes fadeIn2 {
@@ -98,5 +96,21 @@ ul#menu li {
     }
     100% {
     color: rgba(255,255,255,1);
+    }
+}
+
+.m-title{
+    color: rgba(0,0,0,0);
+    animation: fadeMtitle ease-in 1.5s forwards;
+    animation-delay: 1.8s;
+    font-size: 17px;
+}
+
+@keyframes fadeMtitle {
+    0% {
+        color: rgba(0,0,0,0);
+    }
+    100% {
+        color: rgba(255,100,255,1)
     }
 }

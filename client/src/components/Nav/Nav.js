@@ -2,11 +2,12 @@ import React from 'react';
 import './Nav.css';
 
 const DisplayStats = ({playerName, score, highScore }) => {
+    
    return(
     <ul id='menu'>
-        <li id='Menu1'>User: {playerName}</li>
-        <li id='Menu2'>Score: {score}</li>
-        <li id='Menu3'>High Score: {highScore}</li>
+        <li id='Menu1'><span className='m-title'>User:</span> {playerName}</li>
+        <li id='Menu2'><span className='m-title'>Score:</span> {score}</li>
+        <li id='Menu3'><span className='m-title'>High Score:</span> {highScore}</li>
     </ul>
     )
 }
