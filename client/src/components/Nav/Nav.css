@@ -1,9 +1,7 @@
 @font-face {
     font-family: 'TR2N';
     src: url('/font/TR2N.woff') format('woff')
-  
 }
-
 
 .nav-container {
     background-image: url('/images/spaceBck.jpeg');
@@ -13,6 +11,7 @@
     background-size: cover;
     height: 120px;
     padding-top: 40px;
+    margin-bottom: 100px;
 }
 
 .nav-color-overlay{

@@ -1,38 +1,32 @@
 .reg-container {
-    display: block;
+   display: inline-block;
     margin: 0 auto;
     width: 260px;
     height: auto;
     border: 2px solid rgb(51, 204, 255,1);
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-   
 }
 
 .img-container {
-    display: block;
+    display: inline-block;
     border: 2px solid rgb(51, 204, 255,0);
     border-top-left-radius: 18px;
     border-bottom-right-radius: 18px;
     background-color: rgba(0,0,0,0.8);
- 
-   
 }
 
 .form-group {
     text-align: center;
     padding-bottom: 10px;
     padding-top: 10px;
-   
-    
 }
 
 .form-group label {
     color: rgba(255,100,255,1);
-    font-size: 14px;
+    font-size: 12px;
     text-align: left !important;
-   
-   
+
 }
 
 .form-control {
@@ -49,15 +43,25 @@
     color: white;
     background-color: black;
     outline: none;
-    border: 2px solid rgba(255,255,255,1);
+    border: 2px solid white;
     padding: 10px;
     font-size: 14px;
 }
 
 #regButton:hover{
-    color: rgb(51, 204, 255,1);
-    border: 2px solid rgb(51, 204, 255,1);
+    color: rgba(255,100,255,1);
+    border: 2px solid rgba(160, 82, 160, 1);
     transition: 1s ease;
+}
+
+.reg-title {
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: rgba(255,100,255,0.5);
+    border-top-left-radius: 18px;
 }
 
 

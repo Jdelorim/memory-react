@@ -1,0 +1,19 @@
+.splash-container {
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 950px;
+    padding-left: 20px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(0,0,0,0.75);
+}
+
+
+
+.splash-container span{
+   padding: 20px;
+   margin-right:10px;
+
+}
