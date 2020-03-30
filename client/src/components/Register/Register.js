@@ -1,13 +1,17 @@
 import React from 'react';
+
 import './Register.css';
 import axios from 'axios';
+import {Redirect} from 'react-router';
 //finish api calls
 
 class Register extends React.Component {
         
         state = {
             userName: '',
-            userPassword: ''
+            userPassword: '',
+            msg: '',
+            redirect: false
         }
 
         handleChange = e => {
@@ -16,26 +20,37 @@ class Register extends React.Component {
             });
         }
 
-        onSubmit = e => { 
+        onSubmit = (e) => { 
             e.preventDefault();
            
             const userSubmission = {
                 userName: this.state.userName,
                 userPassword: this.state.userPassword
             }
-            console.log('------',userSubmission);
+            
 
-            axios.post('/register', userSubmission)
+            axios.post('users/register', userSubmission)
                 .then(res=>{
-                    console.log(res.data);
+                    console.log(res.data.msg);
+                    this.setState({
+                        msg: res.data.msg
+                    })
+                    if(res.data.success) {
+                        this.setState({
+                            redirect: true
+                        })
+                    }
                 })
                 .catch(err=>{
-                    console.log
+                    console.log(err);
                 })
                 
         }
 
         render() {
+            if(this.state.redirect) {
+                return <Redirect push to='/game'/>
+            }
             return ( 
                 <div className='reg-container'>
                     <div className='img-container'>
@@ -52,7 +67,7 @@ class Register extends React.Component {
 
                         <div className='form-group'>
                             <label>User Password:</label>
-                            <input type='text' className='form-control'
+                            <input type='password' className='form-control'
                             name='userPassword' value={this.state.userPassword}
                             onChange={this.handleChange} required />
                         </div>
@@ -61,7 +76,11 @@ class Register extends React.Component {
                             <button id='regButton' type='submit'>
                                 Let's Play!
                             </button>
+                            <div className='reg-err'>
+                                {this.state.msg}
+                            </div>
                         </div>
+
                     </form>
                     </div> 
                 </div>

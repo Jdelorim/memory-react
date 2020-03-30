@@ -6,6 +6,7 @@ let GameSchema = new Schema({
    name: {
        type: String,
        required: true
+       
    },
    imageRef: {
        type: String,

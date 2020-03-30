@@ -7,6 +7,10 @@ let PlayersSchema = new Schema({
         type: String,
         required: true
     },
+    userPassword: {
+        type: String,
+        required: true
+    },
     currentScore: {
         type: Number,
         required: true,
@@ -14,6 +18,8 @@ let PlayersSchema = new Schema({
     },  
     highScore: {
         type: Number,
+        required: true,
+        default: 0
     }
 });
 

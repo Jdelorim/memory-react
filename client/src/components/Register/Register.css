@@ -64,4 +64,10 @@
     border-top-left-radius: 18px;
 }
 
+.reg-err {
+    color: white;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
 
