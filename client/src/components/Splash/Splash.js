@@ -1,6 +1,7 @@
 import React from 'react';
-import Register from '../Register/Register';
 import Nav from '../Nav/Nav';
+import Register from '../Register/Register';
+import Login from '../Login/Login';
 import './Splash.css';
 
 const Splash= () => {
@@ -14,7 +15,7 @@ const Splash= () => {
         <div className='splash-container'>
             
            <span><Register /></span> 
-            {/*<Login/> */}
+           <span><Login/></span>     
             {/*<Guest/> */} 
         </div>
         </div>

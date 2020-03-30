@@ -64,14 +64,12 @@ class Register extends React.Component {
                             name='userName' value={this.state.userName}
                             onChange={this.handleChange} required />
                         </div>
-
                         <div className='form-group'>
                             <label>User Password:</label>
                             <input type='password' className='form-control'
                             name='userPassword' value={this.state.userPassword}
                             onChange={this.handleChange} required />
                         </div>
-                        
                         <div className='form-group'>
                             <button id='regButton' type='submit'>
                                 Let's Play!
@@ -80,16 +78,11 @@ class Register extends React.Component {
                                 {this.state.msg}
                             </div>
                         </div>
-
                     </form>
                     </div> 
                 </div>
-                
             )
-
         }
-
-
-}
+    }
 
 export default Register;

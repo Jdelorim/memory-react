@@ -3,6 +3,7 @@
 const userRoutes = require('express').Router();
 const Players = require('../models/Players');
 
+
 module.exports = app => {
     
     userRoutes.route('/register').post((req, res)=> {
@@ -14,6 +15,8 @@ module.exports = app => {
                 return res.send({success: false, msg: 'Username is already taken!' });
             } 
                 const newPlayer = new Players(req.body);
+                newPlayer.userName = req.body.toLowerCase();
+                newPlayer.userPassword = newPlayer.generateHash(req.body.password);
                 newPlayer.save().then((result)=> {
                     console.log(result);
                     return res.send({
@@ -27,9 +30,46 @@ module.exports = app => {
         })
     });
 
-    userRoutes.route('/player').get((req,res)=>{    
-        Players.findOne({})
+    userRoutes.route('/login').post((req, res)=>{
+       
+        const {userName, userPassword} = req.body;
+        console.log(userName, userPassword);
+        Players.findOne({userName}).then(data => {
+            if(data) {
+                if(userPassword === data.userPassword){
+                    return res.send({
+                        success: true,
+                        msg: 'Thanks for Logging in!'
+                    });
+                } else {
+                    return res.send({
+                        success: false,
+                        msg: 'Incorrect Password!'
+                    });
+                }
+            } else {
+                return res.send({
+                    success: false,
+                    msg: 'Non Existent User Name'
+                });
+            }
+        })
+        
     })
+
+    // userRoutes.route('/login').post((req, res, next) => {
+    //     let {userName, userPassword} = req.body;
+    //     userName = req.body.userName.toLowerCase();
+    //     console.log(userName, userPassword);
+    //     next();
+    //     }, passport.authenticate('local'), (req, res) => {
+    //         console.log('logged in', req.user);
+    //         var userInfo = {
+    //             username: req.user.username
+    //         };
+    //         res.send(userInfo);
+    //     }
+    // );
 
 
 app.use('/users', userRoutes);

@@ -1,0 +1,53 @@
+.log-container {
+    display: inline-block;
+    margin: 0 auto;
+    width: 260px;
+    height: auto;
+    border: 2px solid rgba(255,100,255,0.5);
+    
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.img-container {
+    display: inline-block;
+    border: 2px solid rgb(51, 204, 255,0);
+    border-top-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    background-color: rgba(0,0,0,0.8);
+}
+.log-label {
+    color: rgba(51, 204, 255,1) !important;
+    font-size: 12px;
+    text-align: left !important;
+}
+
+.log-title {
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    background-color:rgba(51, 204, 255,1);
+    border-top-left-radius: 18px;
+}
+
+#logButton {
+    color: white;
+    background-color: black;
+    outline: none;
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#logButton:hover{
+    color: rgba(51, 204, 255,1);
+    border: 2px solid rgba(51, 204, 255,1);
+    transition: 1s ease;
+}
+
+.log-err {
+    color: white;
+    margin-top: 15px;
+    font-size: 12px;
+}

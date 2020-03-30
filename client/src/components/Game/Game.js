@@ -1,12 +1,13 @@
 import React from 'react';
 import './Game.css';
 import Nav2 from '../Nav/Nav2';
+import Card from '../Card/Card';
 
-
-/*Dont update props*/
 class Game extends React.Component{
+    
     state = {
-       score: 0
+       score: 0,
+       
     }
 
     handleClick = () => {
@@ -15,20 +16,17 @@ class Game extends React.Component{
                 score: this.state.score + 1
             },()=>(console.log(this.state.score)))
         )
-        
     }
-    
-
     
     render(){
         const {score} = this.state;
-        return(
+        return (
             <div className='container'>
              <Nav2 user='ffdsfds' score={score} highScore='0ds099'/>
+             <Card name={'Julie Mao'} imgRef={'/images/Julie_Mao.jpg'} />
              <div className='score'>score: {score}</div>
              <button onClick={this.handleClick}>hit me</button>
             </div>
-            
         );
     }
 

@@ -9,12 +9,6 @@ class ScoreBoard extends React.Component{
         highScore: this.props.score
     }
     
-
-
-         
-      
-
-
     render() {
         const {user, score, highScore} = this.props;
         return(
