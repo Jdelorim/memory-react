@@ -10,12 +10,12 @@ class Game extends React.Component{
        
     }
 
-    handleClick = () => {
-        return (
+    handleClick = (prevState) => {
+        
             this.setState({
                 score: this.state.score + 1
             },()=>(console.log(this.state.score)))
-        )
+        
     }
     
     render(){
@@ -23,9 +23,9 @@ class Game extends React.Component{
         return (
             <div className='container'>
              <Nav2 user='ffdsfds' score={score} highScore='0ds099'/>
-             <Card name={'Julie Mao'} imgRef={'/images/Julie_Mao.jpg'} />
+             <Card name={'Julie Mao'} imgRef={'/images/Julie_Mao.jpg'} handleClick={this.handleClick}/>
              <div className='score'>score: {score}</div>
-             <button onClick={this.handleClick}>hit me</button>
+             {/* <button onClick={this.handleClick}>hit me</button> */}
             </div>
         );
     }
