@@ -19,13 +19,16 @@ const PORT = process.env.PORT || 4000;
   const connection = mongoose.connection;
   connection.once('open', ()=>{
     console.log('DB connected!')
+  }).then(()=>{
+    // require('./config/seed');
   })
   
   require('./routes/index.js')(app);
+  require('./routes/gameData')(app);
   
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  }
 
   app.listen(PORT, () => {
     console.log(`server is running on ${PORT}`);
