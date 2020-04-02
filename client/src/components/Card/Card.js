@@ -11,7 +11,7 @@ class Card extends React.Component {
             <div className='card-container' onClick={()=>this.props.handleClick(id, click)} >
                 <img className='card-img'  src={imgRef} alt='fdsdfs'/>
                 <div className='card-title'>{name}</div>
-                {console.log(id)}
+                {console.log(this.id)}
             </div>
 
         )

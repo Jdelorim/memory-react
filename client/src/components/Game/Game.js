@@ -53,6 +53,8 @@ class Game extends React.Component{
         console.log('you loose')
     }
 
+    shuffleArr = (arr) => arr.sort(() => 0.5 - Math.random());
+    
     
     render(){
         const {score, gameData, click} = this.state;
@@ -60,12 +62,12 @@ class Game extends React.Component{
         return (
             <div className='container'>
              <Nav2 user='ffdsfds' score={score} highScore='0ds099'/>
-             {gameData.map((i,index)=>(
+                <div className='game-area'>
+                {this.shuffleArr(gameData).map((i,index)=>(
                 <Card name={i.name} key={index} id={i._id} imgRef={i.img} click={click} handleClick={this.handleClick}/> 
              ))
              }
-            <div className='score'>score: {score}</div>
-             {/* <button onClick={this.handleClick}>hit me</button> */}
+                 </div>
             </div>
         );
     }
