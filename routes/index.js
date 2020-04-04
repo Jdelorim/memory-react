@@ -8,15 +8,13 @@ module.exports = app => {
     
     userRoutes.route('/register').post((req, res)=> {
         console.log(req.body);
-        const {userName, userPassword} = req.body;
+        const {userName} = req.body;
         Players.findOne({userName}).then(data => {
             if(data) {
                 console.log('username taken');
                 return res.send({success: false, msg: 'Username is already taken!' });
             } 
                 const newPlayer = new Players(req.body);
-                newPlayer.userName = req.body.toLowerCase();
-                newPlayer.userPassword = newPlayer.generateHash(req.body.password);
                 newPlayer.save().then((result)=> {
                     console.log(result);
                     return res.send({
@@ -58,7 +56,7 @@ module.exports = app => {
     });
 
     userRoutes.route('/getUser').get((req,res)=>{
-        console.log('hitting route');
+        
     })
     
 
