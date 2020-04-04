@@ -25,9 +25,9 @@ class Game extends React.Component{
                 gameData: tempArr
             },()=>console.log('-----', this.state.gameData))
         })
-        .then(axios.get('users/getUser').then(data=>{
-            console.log('data: ', data);
-        }))
+        // .then(axios.get('users/getUser').then(data=>{
+        //     console.log('data: ', data);
+        // }))
         .catch(err=>{
             console.error(err);
         })
