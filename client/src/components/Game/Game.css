@@ -1,12 +1,32 @@
 .score{
     color:white;
 }
-.game-area{
-    width: 50%;
-    margin: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    
-    
+.game-area {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2em;
+  justify-items: stretch;
+  border: 3px solid white;
+  padding: 10px;
+  margin-top:-80px;
   
 }
+
+@media screen and (min-width: 1235px) {
+  .game-area {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+    justify-items: stretch;
+    border: 3px solid white;
+    padding: 10px;
+    margin-top:-80px;
+    
+  }
+
+}
+

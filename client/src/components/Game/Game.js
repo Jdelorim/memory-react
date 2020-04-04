@@ -63,11 +63,10 @@ class Game extends React.Component{
             <div className='container'>
              <Nav2 user='ffdsfds' score={score} highScore='0ds099'/>
                 <div className='game-area'>
-                {this.shuffleArr(gameData).map((i,index)=>(
-                <Card name={i.name} key={index} id={i._id} imgRef={i.img} click={click} handleClick={this.handleClick}/> 
-             ))
-             }
-                 </div>
+                {this.shuffleArr(gameData.slice(0,12)).map((i,index)=>(
+                 <Card name={i.name} key={index} id={i._id} imgRef={i.img} click={click} handleClick={this.handleClick}/>
+                ))}
+                </div>
             </div>
         );
     }
