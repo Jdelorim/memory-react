@@ -30,3 +30,21 @@
 
 }
 
+@media screen and (max-width: 1005px) {
+
+.game-area{
+  width: 85%;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .game-area{
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  }
+

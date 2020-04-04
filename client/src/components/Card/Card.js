@@ -2,17 +2,9 @@ import React from 'react';
 import './Card.css';
 class Card extends React.Component {
    
-    state = {
-        sfx1 = new Audio('/sfx/beep_3.wav')
-    }
+    
 
-    soundEnter = () => {
-
-    }
-
-    soundExit = () => {
-        
-    }
+    
 
 
 

@@ -15,6 +15,12 @@ class Nav2 extends React.Component{
                 score: this.props.score
             })
         }
+
+        if(prevProps.highScore !== this.props.highScore) {
+            this.setState({
+                highScore: this.props.highScore
+            })
+        }
     }
 
 
@@ -27,7 +33,7 @@ class Nav2 extends React.Component{
               <div className='nav-title'>The Expanse Memory Game</div>
               <div className='nav-link-container'>
                     <ScoreBoard user={user} score={score} highScore={highScore} />  
-                  <div>{this.state.score}</div>
+                
                 </div>  
             </div>
        </div>

@@ -11,16 +11,17 @@ let PlayersSchema = new Schema({
         type: String,
         required: true
     },
-    currentScore: {
-        type: Number,
-        required: true,
-        default: 0
-    },  
     highScore: {
         type: Number,
         required: true,
         default: 0
+    },
+    lastLoggedin: {
+        type: String,
+        required: true,
+        default: Date.now()
     }
+
 });
 
 const Players = mongoose.model('Players', PlayersSchema);

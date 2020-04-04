@@ -55,21 +55,12 @@ module.exports = app => {
             }
         })
         
-    })
+    });
 
-    // userRoutes.route('/login').post((req, res, next) => {
-    //     let {userName, userPassword} = req.body;
-    //     userName = req.body.userName.toLowerCase();
-    //     console.log(userName, userPassword);
-    //     next();
-    //     }, passport.authenticate('local'), (req, res) => {
-    //         console.log('logged in', req.user);
-    //         var userInfo = {
-    //             username: req.user.username
-    //         };
-    //         res.send(userInfo);
-    //     }
-    // );
+    userRoutes.route('/getUser').get((req,res)=>{
+        console.log('hitting route');
+    })
+    
 
 
 app.use('/users', userRoutes);

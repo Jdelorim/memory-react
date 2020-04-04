@@ -52,10 +52,11 @@
 .nav-link-container {
     color: white;
     font-size: 12px;
-    display: inline;
-    text-align: center;
     
+    text-align: center;
 }
+
+
 ul#menu li {
     display: inline;
     padding-right: 50px;
@@ -102,7 +103,7 @@ li span{
     color: rgba(0,0,0,0);
     animation: fadeMtitle ease-in 1.5s forwards;
     animation-delay: 1.8s;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 @keyframes fadeMtitle {
@@ -112,4 +113,28 @@ li span{
     100% {
         color: rgba(255,100,255,1)
     }
+}
+
+
+@Media screen and (max-width: 700px) {
+    .nav-link-container {
+        
+        font-size: 12px;
+        text-align: left;
+
+        
+    }
+    ul#menu li {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .m-title{
+        font-size: 14px;
+    }
+    .nav-title {
+        font-size: 30px;
+    
+    }
+
 }

@@ -12,6 +12,7 @@ class Game extends React.Component{
        gameData: [],
        cardIndex: [],
        click: false,
+       highScore: 0
        
     }
 
@@ -24,6 +25,9 @@ class Game extends React.Component{
                 gameData: tempArr
             },()=>console.log('-----', this.state.gameData))
         })
+        .then(axios.get('users/getUser').then(data=>{
+            console.log('data: ', data);
+        }))
         .catch(err=>{
             console.error(err);
         })
@@ -47,21 +51,43 @@ class Game extends React.Component{
 
     handleWin = () => {
         console.log('you win');
+        alert('you have won!');
+        const {score} = this.state;
+        const holdScore = score;
+        this.setState({
+            score: 0,
+            highScore: holdScore,
+            cardIndex: []
+        },()=> console.log('after win:', this.state))
     }
 
     handleLoose = () => {
-        console.log('you loose')
+        const {score, highScore} = this.state;
+        alert('you have lost!');
+        let newScore = score;
+        if(newScore >= highScore) {
+            this.setState({
+                highScore: newScore,
+                score: 0,
+                cardIndex: []
+            }, ()=>console.log('after loose + new highScore : ', this.state))
+        } else {
+            this.setState({
+                score: 0,
+                cardIndex: []
+            }, ()=>console.log('after loose not higher then high score:', this.state ))
+        }
     }
 
     shuffleArr = (arr) => arr.sort(() => 0.5 - Math.random());
     
     
     render(){
-        const {score, gameData, click} = this.state;
+        const {score, gameData, click, highScore} = this.state;
      
         return (
             <div className='container'>
-             <Nav2 user='ffdsfds' score={score} highScore='0ds099'/>
+             <Nav2 user='ffdsfds' score={score} highScore={highScore}/>
                 <div className='game-area'>
                 {this.shuffleArr(gameData.slice(0,12)).map((i,index)=>(
                  <Card name={i.name} key={index} id={i._id} imgRef={i.img} click={click} handleClick={this.handleClick}/>
