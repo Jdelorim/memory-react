@@ -2,10 +2,6 @@ import React from 'react';
 import './Card.css';
 class Card extends React.Component {
    
-  
-
-   
-
     render(){
         const {name, imgRef, click, id, sfx1} = this.props;
        

@@ -11,20 +11,21 @@ import './app.css';
 const App = () => {
     
     return(
-        <Router>    
+    //     <Router>    
             
            
-                <div className='playing-area'>
-                    <Switch>
-                        <Route path='/' exact component={Splash}/>
-                        <Route path='/game' exact component={Game}/>
-                    </Switch>
+    //             <div className='playing-area'>
+    //                 <Switch>
+    //                     <Route path='/' exact component={Splash}/>
+    //                     <Route path='/game' exact component={Game}/>
+    //                 </Switch>
                    
-                </div>
+    //             </div>
             
 
-        </Router>
-    )
+    //     </Router>
+        <Game />
+     )
 }
 
 export default App;

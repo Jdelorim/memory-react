@@ -9,10 +9,12 @@
   grid-gap: 2em;
   justify-items: stretch;
   border: 3px solid white;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 25px 50px 25px 50px;
+  background-color: rgba(0,0,0,0.7);
   margin-top:-80px;
-  
 }
+
 
 @media screen and (min-width: 1235px) {
   .game-area {
@@ -22,8 +24,8 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2em;
     justify-items: stretch;
-    border: 3px solid white;
-    padding: 10px;
+   
+    
     margin-top:-80px;
     
   }
@@ -32,7 +34,7 @@
 
 @media screen and (max-width: 1005px) {
 
-.game-area{
+.game-area {
   width: 85%;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -41,8 +43,8 @@
 
 @media screen and (max-width: 600px) {
 
-  .game-area{
-    width: 90%;
+  .game-area {
+    width: 60%;
     grid-template-columns: repeat(3, 1fr);
   }
   

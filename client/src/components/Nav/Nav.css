@@ -87,7 +87,13 @@ ul#menu li {
 
 }
 li span{
-    color:black;
+     color:black;
+}
+
+.nav-status{
+    color: red;
+    font-size: 35px;
+    margin-top: 30px;
 }
 
 @keyframes fadeIn2 {

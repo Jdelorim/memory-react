@@ -15,7 +15,7 @@ const Splash= () => {
         <div className='splash-container'>
             
            <span><Register /></span> 
-           <span><Login/></span>     
+           <span><Login /></span>     
             {/*<Guest/> */} 
         </div>
         </div>
