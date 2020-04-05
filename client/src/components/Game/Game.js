@@ -12,7 +12,8 @@ class Game extends React.Component{
        gameData: [],
        cardIndex: [],
        click: false,
-       highScore: 0
+       highScore: 0,
+       sfx1: new Audio('/sfx/beep_3.wav')
        
     }
 
@@ -81,16 +82,29 @@ class Game extends React.Component{
 
     shuffleArr = (arr) => arr.sort(() => 0.5 - Math.random());
     
-    
+    playSfx = () => {
+        const sfx = this.state.sfx1;
+        console.log('should play sfx once');
+        if(sfx.duration > 0 && !sfx.paused) {
+            sfx.currentTime = 0;
+            sfx.play();
+        } else {
+            sfx.play();
+        }
+        
+    } 
+
+
     render(){
-        const {score, gameData, click, highScore} = this.state;
+        const {score, gameData, click, highScore, sfx1} = this.state;
+       
      
         return (
             <div className='container'>
              <Nav2 user='ffdsfds' score={score} highScore={highScore}/>
                 <div className='game-area'>
                 {this.shuffleArr(gameData.slice(0,12)).map((i,index)=>(
-                 <Card name={i.name} key={index} id={i._id} imgRef={i.img} click={click} handleClick={this.handleClick}/>
+                 <Card name={i.name} key={index} id={i._id} imgRef={i.img} click={click} sfx={sfx1} playSfx={this.playSfx} handleClick={this.handleClick}/>
                 ))}
                 </div>
             </div>
