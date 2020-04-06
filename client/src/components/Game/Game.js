@@ -28,11 +28,8 @@ class Game extends React.Component{
             let tempArr = data.data;
             this.setState({
                 gameData: tempArr
-            },()=>console.log('-----', this.state.gameData))
+            })
         })
-        // .then(axios.get('users/getUser').then(data=>{
-        //     console.log('data: ', data);
-        // }))
         .catch(err=>{
             console.error(err);
         })
@@ -50,7 +47,7 @@ class Game extends React.Component{
                     score: updateScore,
                     status: ''
                 
-                },()=>console.log('9999' + this.id));
+                });
             }
         } else {
             this.handleLoose();
@@ -67,7 +64,7 @@ class Game extends React.Component{
             highScore: holdScore,
             cardIndex: [],
             status: 'You have won!'
-        },()=> console.log('after win:', this.state))
+        })
     }
 
     handleLoose = () => {
@@ -80,13 +77,13 @@ class Game extends React.Component{
                 score: 0,
                 cardIndex: [],
                 status: 'You have lost!'
-            }, ()=>console.log('after loose + new highScore : ', this.state))
+            })
         } else {
             this.setState({
                 score: 0,
                 cardIndex: [],
                 status: 'You have lost!'
-            }, ()=>console.log('after loose not higher then high score:', this.state ))
+            })
         }
     }
 
