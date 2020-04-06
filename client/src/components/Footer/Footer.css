@@ -1,7 +1,11 @@
 .footer{
+    position: relative;
+    bottom: 0;
     color: white;
     text-align: center;
+    width: 100%;
     margin-top: 20px;
+    margin-bottom: 20px;
     padding-top: 5px;
 }
 .footer-link {
@@ -11,8 +15,9 @@
     text-decoration: none;
     color: whitesmoke;
     font-size: 0.8em;
-
 }
+
+
 
 .footer-link a:hover{
     color: grey;

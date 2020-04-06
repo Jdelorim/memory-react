@@ -2,18 +2,16 @@
     border: 3px solid white;
     border-radius: 10px;
     margin: 0 auto;
-    width: 950px;
-    padding-left: 20px;
-    height: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    width: 80%;
+    padding: 1em 1em 1em 1.5em;  
+    height: auto;   
     background-color: rgba(0,0,0,0.75);
 }
 
 
-
-.splash-container span{
-   padding: 20px;
-   margin-right:10px;
-
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }

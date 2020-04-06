@@ -113,6 +113,7 @@ class Game extends React.Component{
         const {score, gameData, click, highScore, sfx1, status, colorStatus} = this.state;
         
         return (
+            <>
             <div className='container'>
             <Nav2 user='ffdsfds' status={status} score={score} colorStatus={colorStatus}highScore={highScore}/>
                 <div className='game-area'>
@@ -120,8 +121,10 @@ class Game extends React.Component{
                  <Card name={i.name} key={index} id={i._id} imgRef={i.img} click={click} sfx={sfx1} playSfx={this.playSfx} handleClick={this.handleClick}/>
                 ))}
                 </div>
-                <Footer />
+                
             </div>
+            <Footer />
+            </>
         );
     }
 

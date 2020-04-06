@@ -1,0 +1,27 @@
+.about{
+    color: white;
+   
+}
+
+.about p{
+    font-size: 0.8em;
+    color: grey;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 1.2em;
+}
+.about-btn-holder {
+    margin: 0 auto;
+    width: 150px;
+}
+
+.about-btn-holder > button{
+    text-align: center;
+    color: white;
+    border: 3px solid white;
+    background-color: rgba(0,0,0,0.8);
+    padding: 1.5em;
+    
+}

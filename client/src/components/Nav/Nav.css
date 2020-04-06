@@ -27,26 +27,11 @@
     font-weight: normal;
     font-style: normal;
     text-align: Center;
-    font-size: 40px;
+    font-size: 3em;
     margin-top: 30px;
     margin-bottom: 20px;
-    color: rgba(255,255,255,0);
+    color:  rgba(255,100,255,1);
     -webkit-text-stroke-width: 1px;
-    animation: fadeIn ease 3s forwards;
-    animation-delay: 0.5s;
-}
-
-@keyframes fadeIn {
-    0% {
-        -webkit-text-stroke-color: rgba(255,255,255,0);
-    }
-    50% {
-        -webkit-text-stroke-color: rgba(255,255,255,0.5);
-    }
-    
-    100% {
-        -webkit-text-stroke-color: rgba(255,100,255,1);
-    }
 }
 
 .nav-link-container {
@@ -68,22 +53,19 @@ ul#menu li {
 #Menu1 {
     color: rgba(0,0,0,0);
     animation: fadeIn2 ease 2s forwards;
-    animation-delay: 3.5s;
+    animation-delay: 1.5s;
 }
 
 #Menu2 {
     color: rgba(0,0,0,0);
     animation: fadeIn2 ease 2s forwards;
-    animation-delay: 4.0s;
-
+    animation-delay: 2.0s;
 }
 
 #Menu3 {
     color: rgba(0,0,0,0);
     animation: fadeIn2 ease 2s forwards;
-    animation-delay: 4.5s;
-    
-
+    animation-delay: 2.5s;
 }
 li span{
      color:black;
@@ -107,7 +89,7 @@ li span{
 .m-title{
     color: rgba(0,0,0,0);
     animation: fadeMtitle ease-in 1.5s forwards;
-    animation-delay: 1.8s;
+   
     font-size: 15px;
 }
 
