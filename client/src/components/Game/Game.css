@@ -12,7 +12,7 @@
   border-radius: 20px;
   padding: 25px 50px 25px 50px;
   background-color: rgba(0,0,0,0.7);
-  margin-top:-80px;
+  
 }
 
 
@@ -24,7 +24,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2em;
     justify-items: stretch;
-    margin-top:-80px;
+   
     
   }
 
@@ -39,7 +39,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
     justify-items: stretch;
-    margin-top:-80px;
+
 }
 
 }
@@ -58,7 +58,7 @@
     padding-left: 0.2em;
     padding-top: 1em;
     padding-bottom: 1em;
-    margin-top:-80px;
+
   }
   
   }

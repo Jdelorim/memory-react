@@ -17,7 +17,8 @@ class Game extends React.Component{
        sfx2: new Audio('sfx/beep_2.wav'),
        winSfx: new Audio('sfx/win.wav'),
        loseSfx: new Audio('sfx/lose.wav'),
-       status: ''
+       status: '',
+       colorStatus: ''
        
     }
 
@@ -45,7 +46,8 @@ class Game extends React.Component{
                this.playSfx(this.state.sfx2);
                 this.setState({
                     score: updateScore,
-                    status: ''
+                    status: '',
+                    colorStatus: ''
                 
                 });
             }
@@ -63,8 +65,9 @@ class Game extends React.Component{
             score: 0,
             highScore: holdScore,
             cardIndex: [],
-            status: 'You have won!'
-        })
+            status: 'You have won!',
+            colorStatus: 'rgba(51, 204, 255,1)'
+        },()=>console.log(this.state.colorStatus))
     }
 
     handleLoose = () => {
@@ -76,14 +79,16 @@ class Game extends React.Component{
                 highScore: newScore,
                 score: 0,
                 cardIndex: [],
-                status: 'You have lost!'
-            })
+                status: 'You have lost!',
+                colorStatus: 'red'
+            },()=>console.log(this.state.colorStatus))
         } else {
             this.setState({
                 score: 0,
                 cardIndex: [],
-                status: 'You have lost!'
-            })
+                status: 'You have lost!',
+                colorStatus: 'red'
+            },()=>console.log(this.state.colorStatus))
         }
     }
 
@@ -101,14 +106,15 @@ class Game extends React.Component{
             a.play();
         }
     } 
+ 
 
 
     render(){
-        const {score, gameData, click, highScore, sfx1, status} = this.state;
+        const {score, gameData, click, highScore, sfx1, status, colorStatus} = this.state;
         
         return (
             <div className='container'>
-            <Nav2 user='ffdsfds' status={status} score={score} highScore={highScore}/>
+            <Nav2 user='ffdsfds' status={status} score={score} colorStatus={colorStatus}highScore={highScore}/>
                 <div className='game-area'>
                  {this.shuffleArr(gameData.slice(0,12)).map((i,index)=>(
                  <Card name={i.name} key={index} id={i._id} imgRef={i.img} click={click} sfx={sfx1} playSfx={this.playSfx} handleClick={this.handleClick}/>

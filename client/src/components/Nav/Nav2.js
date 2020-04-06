@@ -4,11 +4,14 @@ import './Nav.css';
 
 class Nav2 extends React.Component{
     state = {
-        // user: this.props.user,
         score: this.props.score,
         highScore: this.props.highScore,
         status: this.props.status,
-        statusMsg: this.props.status
+        statusMsg: this.props.status,
+        colorStatus: this.props.colorStatus
+    }
+    componentDidMount(){
+        console.log('====' + this.state.colorStatus);
     }
 
     componentDidUpdate(prevProps) {
@@ -29,20 +32,30 @@ class Nav2 extends React.Component{
                 status: this.props.status
             })
         }
+
+        if(prevProps.colorStatus !== this.props.colorStatus) {
+            this.setState({
+                colorStatus: this.props.colorStatus
+            },()=>console.log('colorS:', this.state.colorStatus))
+        }
     }
 
 
 
+
     render(){
-        const {score, highScore, status} = this.state;
+        const {score, highScore, status, colorStatus} = this.state;
+        const style = {
+            color: colorStatus
+        }
      
         return(
             <div className='nav-container'>
             <div className='nav-color-overlay'>
               <div className='nav-title'>The Expanse Memory Game</div>
               <div className='nav-link-container'>
-                    <ScoreBoard score={score} highScore={highScore} />  
-                    <div className='nav-status'>{status}</div>
+                <ScoreBoard score={score} highScore={highScore} />  
+                <div className='nav-status' style={style}>{status}</div>
             </div>  
             </div>
        </div>

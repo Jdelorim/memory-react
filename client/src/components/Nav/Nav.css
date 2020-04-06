@@ -10,8 +10,8 @@
     background-attachment: fixed;
     background-size: cover;
     height: 120px;
-    padding-top: 40px;
-    margin-bottom: 100px;
+    padding-top: 20px;
+    margin-bottom: 45px;
 }
 
 .nav-color-overlay{
@@ -29,7 +29,7 @@
     text-align: Center;
     font-size: 40px;
     margin-top: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: rgba(255,255,255,0);
     -webkit-text-stroke-width: 1px;
     animation: fadeIn ease 3s forwards;
@@ -52,7 +52,6 @@
 .nav-link-container {
     color: white;
     font-size: 12px;
-    
     text-align: center;
 }
 
@@ -91,7 +90,7 @@ li span{
 }
 
 .nav-status{
-    color: red;
+   
     font-size: 35px;
     margin-top: 30px;
 }
@@ -124,22 +123,29 @@ li span{
 
 @Media screen and (max-width: 700px) {
     .nav-link-container {
-        
         font-size: 12px;
         text-align: left;
-
-        
     }
+    
     ul#menu li {
         display: block;
         padding-bottom: 10px;
     }
-
-    .m-title{
+    
+    .m-title {
         font-size: 14px;
     }
+
     .nav-title {
         font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    .nav-status {
+       
+        font-size: 1.8em;
+        text-align: center;
+        margin-top: 0px;
     
     }
 
